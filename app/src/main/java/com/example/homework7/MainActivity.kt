@@ -25,9 +25,11 @@ class MainActivity : AppCompatActivity() {
         chBox.setOnCheckedChangeListener{
                 buttonView, isChecked ->
             if (isChecked){
+                binding.edLastname.inputType = InputType.TYPE_CLASS_NUMBER
                 binding.edFirstName.inputType = InputType.TYPE_CLASS_NUMBER
             }else{
                 binding.edFirstName.inputType = InputType.TYPE_CLASS_TEXT
+                binding.edLastname.inputType = InputType.TYPE_CLASS_TEXT
             }
         }
 
@@ -67,6 +69,7 @@ class MainActivity : AppCompatActivity() {
 //            }
 
             binding.edFirstName.text.clear()
+            binding.edLastname.text.clear()
         }
     }
 }
